@@ -53,5 +53,5 @@ export default {
       textColor      : ['disabled'],
     },
   },
-  plugins: [],
+  plugins: [require('@privyid/tailwind-animation')],
 }

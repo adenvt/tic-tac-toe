@@ -4,12 +4,15 @@
       <h1 class="title">
         Tic Tac Toe
       </h1>
-      <template v-if="isGameOver">
-        <h2>{{ winner ? `${winner} Wins!!` : 'Draw!!' }}</h2>
-      </template>
-      <template v-else>
-        <h2>Player {{ player }}'s turn!</h2>
-      </template>
+      <Transition
+        name="slide-left"
+        mode="out-in">
+        <h2
+          :key="player"
+          class="text-xl">
+          Player {{ player }}'s turn!
+        </h2>
+      </Transition>
     </div>
     <div
       class="board"
@@ -26,14 +29,44 @@
         </div>
       </template>
     </div>
-    <div v-if="isGameOver">
-      <button
-        class="button"
-        @click="reset()">
-        New Game
-      </button>
-    </div>
   </div>
+  <r-modal
+    title="Game Over"
+    :model-value="isGameOver"
+    no-close
+    no-backdrop-close>
+    <div class="flex flex-col items-center space-y-4">
+      <div class="py-4 text-4xl">
+        {{ winner ? `${winner} Win` : 'Draw' }}
+      </div>
+      <div class="space-x-4">
+        <r-button
+          @click="reset()">
+          New Game
+        </r-button>
+        <r-button
+          @click="selectMode()">
+          Settings
+        </r-button>
+      </div>
+    </div>
+  </r-modal>
+  <r-modal
+    v-model="modalMode"
+    title="Select Mode"
+    no-close
+    no-backdrop-close>
+    <div class="pt-4 space-x-4">
+      <r-button
+        @click="setMode(1)">
+        1 Player
+      </r-button>
+      <r-button
+        @click="setMode(2)">
+        2 Players
+      </r-button>
+    </div>
+  </r-modal>
 </template>
 
 <script setup lang="ts">
@@ -51,10 +84,14 @@ import {
   findOpponent,
   PLAYERS,
 } from './game'
+import rButton from './components/Button.vue'
+import rModal from './components/Modal.vue'
 
 const boards = ref<string[]>(Array.from<string>({ length: 9 }).fill(''))
 const player = ref<string>(PLAYERS[0])
 const mode   = ref(1)
+
+const modalMode = ref(false)
 
 const winner = computed(() => {
   return checkWinner(boards.value)
@@ -79,6 +116,17 @@ function setMark (index: number) {
   }
 }
 
+function setMode (mode_: number) {
+  mode.value      = mode_
+  modalMode.value = false
+}
+
+function selectMode () {
+  modalMode.value = true
+
+  reset()
+}
+
 function nextPlayer () {
   player.value = findOpponent(player.value)
 
@@ -93,7 +141,7 @@ function nextPlayer () {
 }
 
 onMounted(() => {
-  reset()
+  selectMode()
 })
 </script>
 
@@ -136,9 +184,5 @@ onMounted(() => {
       @apply content-[var(--player)] text-retro-800/30;
     }
   }
-}
-
-.button {
-  @apply px-4 py-1 border-2 border-retro-800 hover:bg-retro-800 hover:text-retro-500;
 }
 </style>

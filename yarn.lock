@@ -436,6 +436,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@privyid/tailwind-animation@npm:^1.0.0-rc.1":
+  version: 1.0.0-rc.1
+  resolution: "@privyid/tailwind-animation@npm:1.0.0-rc.1"
+  peerDependencies:
+    tailwind: ">= 3.0.0"
+  checksum: 10/f56b2fec09294702aa65320b27ef1d2a5f21347ab2171c0ac2bb716cb46ad8a14cc73daefe91e43974ef37fba1df47e59685fe36ec8894d920d5acb1a0463114
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-android-arm-eabi@npm:4.12.0":
   version: 4.12.0
   resolution: "@rollup/rollup-android-arm-eabi@npm:4.12.0"
@@ -4575,6 +4584,7 @@ __metadata:
   resolution: "tic-tac-toe@workspace:."
   dependencies:
     "@privyid/eslint-config-persona": "npm:^1.0.0-rc.1"
+    "@privyid/tailwind-animation": "npm:^1.0.0-rc.1"
     "@typescript-eslint/eslint-plugin": "npm:5.62.0"
     "@typescript-eslint/parser": "npm:5.62.0"
     "@vitejs/plugin-vue": "npm:^5.0.3"
