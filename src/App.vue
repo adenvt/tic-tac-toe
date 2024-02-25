@@ -147,7 +147,7 @@ onMounted(() => {
 
 <style lang="postcss">
 .main {
-  @apply flex flex-col items-center pt-16 h-full min-h-screen bg-retro-500 font-body text-retro-800 space-y-4;
+  @apply flex flex-col items-center pt-16 h-full min-h-screen space-y-4;
 }
 
 .title {

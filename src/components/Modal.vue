@@ -68,7 +68,7 @@ function onBackdropClicked () {
 
 <style lang="postcss">
 .modal {
-  @apply fixed top-0 left-0 w-full h-full flex justify-center items-center z-50;
+  @apply fixed top-0 left-0 w-screen h-full min-h-screen flex justify-center items-center z-50;
 
   &__container {
     @apply relative bg-retro-500 border-2 border-retro-800 min-w-52 z-[2];
