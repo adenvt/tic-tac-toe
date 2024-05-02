@@ -415,24 +415,25 @@ __metadata:
   linkType: hard
 
 "@privyid/eslint-config-persona@npm:^1.0.0-rc.1":
-  version: 1.0.0-rc.2
-  resolution: "@privyid/eslint-config-persona@npm:1.0.0-rc.2"
+  version: 1.0.0-rc.6
+  resolution: "@privyid/eslint-config-persona@npm:1.0.0-rc.6"
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ">=5.47.0"
-    "@typescript-eslint/parser": ">=5.47.0"
-    "@vue/eslint-config-typescript": ">=11.0.2"
-    eslint: ">=8.30.0"
-    eslint-config-standard-with-typescript: ">=24.0.0"
-    eslint-formatter-pretty: ">=4.1.0"
-    eslint-plugin-align-assignments: ">=1.1.2"
-    eslint-plugin-import: ">=2.26.0"
-    eslint-plugin-n: ">=15.6.0"
-    eslint-plugin-node: ">=11.1.0"
-    eslint-plugin-promise: ">=6.1.1"
-    eslint-plugin-unicorn: ">=45.0.2"
-    eslint-plugin-varspacing: ">=1.2.2"
-    eslint-plugin-vue: ">=9.8.0"
-  checksum: 10/27bec4862c2fe70b0420fb99b23669dc3de10c4819781b834e5855e64942841bd23075b0b19800a1d24e2a293c048bac83699c74d9e939db82ba539fd81d5fb1
+    "@typescript-eslint/eslint-plugin": 5.62.0
+    "@typescript-eslint/parser": 5.62.0
+    "@vue/eslint-config-typescript": 13.0.0
+    eslint: 8.57.0
+    eslint-config-standard-with-typescript: 21.0.1
+    eslint-formatter-pretty: 5.0.0
+    eslint-plugin-align-assignments: 1.1.2
+    eslint-plugin-import: 2.29.1
+    eslint-plugin-n: 16.6.2
+    eslint-plugin-node: 11.1.0
+    eslint-plugin-promise: 6.1.1
+    eslint-plugin-unicorn: 48.0.1
+    eslint-plugin-varspacing: 1.2.2
+    eslint-plugin-vue: 9.23.0
+    typescript: 5.4.5
+  checksum: 10/25d91e0b8abcd4d694a9328859c2469a48d02216efb0efa7e610789c0980d83be5e9970bb41ecc8543ecf80904be6ab1250019354ba1aef28220f23f90dcadee
   languageName: node
   linkType: hard
 
