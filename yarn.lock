@@ -437,11 +437,11 @@ __metadata:
   linkType: hard
 
 "@privyid/tailwind-animation@npm:^1.0.0-rc.1":
-  version: 1.0.0-rc.2
-  resolution: "@privyid/tailwind-animation@npm:1.0.0-rc.2"
+  version: 1.2.0
+  resolution: "@privyid/tailwind-animation@npm:1.2.0"
   peerDependencies:
     tailwind: ">= 3.0.0"
-  checksum: 10/8b8ca833e7136a776d95f83b67349199b568d099bbe3a57355a8b88001ac28dcbb8124beda44192ab322c8bfb6e63ba024e93c0e1cecfc0431577a2caa60bdda
+  checksum: 10/e54c100d69beeaba3285f75df7396da31b74c393454cb1e2def83dc3209f6a6f1f02dd94b132de2a3d2c4a8216e55d4309ff8e108ab13358243df0e3f2d70540
   languageName: node
   linkType: hard
 
